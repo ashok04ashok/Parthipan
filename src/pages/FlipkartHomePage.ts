@@ -3,6 +3,8 @@ export default class FlipkartHomePage {
   public get searchButton() { return $('button[type="submit"]'); }
 
   async open() {
+    await browser.maximizeWindow();
+    await browser.pause(2000);
     await browser.url('https://www.flipkart.com');
   }
 
