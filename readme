@@ -49,7 +49,7 @@ npm install --save-dev allure-commandline
 git init
 git add .
 git commit -m "first commit"
-# git branch -M main
-git checkout -b t1
+# git branch -M master
+git checkout -b master
 git remote add origin https://github.com/ashok04ashok/Parthipan.git
-git push -u origin t1
+git push -u origin master
