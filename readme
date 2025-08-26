@@ -1,0 +1,55 @@
+npm install
+npm run test
+npm run allure:report
+
+npm info @wdio/selenium-standalone-service versions
+npm install @wdio/selenium-standalone-service@latest
+
+npm install
+
+
+npm cache clean --force
+npm install
+
+
+npm run test
+npm run allure:report
+
+
+npm install @wdio/cli@latest @wdio/local-runner@latest @wdio/mocha-framework@latest typescript ts-node --save-dev
+
+
+npm install chai --save-dev
+npm install @types/chai --save-dev
+
+npm install wdio-chromedriver-service --save-dev
+
+npm install @wdio/selenium-standalone-service --save-dev
+
+
+del node_modules
+del package-lock.json
+
+
+npm install
+
+npm install @wdio/selenium-standalone-service --save-dev
+npm install --save-dev @wdio/chromedriver-service
+npm install --save-dev @wdio/playwright-service playwright
+
+
+npm install --save-dev @wdio/devtools-service
+npm install --save-dev @wdio/allure-reporter
+npm install --save-dev allure-commandline
+
+
+
+
+
+git init
+git add .
+git commit -m "first commit"
+# git branch -M main
+git checkout -b t1
+git remote add origin https://github.com/ashok04ashok/Parthipan.git
+git push -u origin t1
