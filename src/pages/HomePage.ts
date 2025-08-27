@@ -1,7 +1,6 @@
 import { waitForElement, enterText, clickElement } from "../utils/actions";
-import BasePage from "./BasePage";
 
-export default class HomePage extends BasePage {
+export default class HomePage {
   public get searchBox() { return $('//input[@name="q"]'); }
   public get searchButton() { return $('//button[@type="submit"]'); }
 
