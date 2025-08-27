@@ -17,3 +17,7 @@ export async function clickElement(element: ChainablePromiseElement) {
     waitForElement(element);
     await element.click();
 }
+
+export function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}

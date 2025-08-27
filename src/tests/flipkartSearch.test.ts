@@ -12,7 +12,7 @@ describe('Purchase a product from Flipkart', () => {
   });
 
   it('Search and purchase laptops on Flipkart', async () => {
-    await homePage.search('laptop');
+    await homePage.searchAndClick('laptop','laptop hp');
     const title = await browser.getTitle();
     expect(title.toLowerCase()).to.include('laptop');
 
