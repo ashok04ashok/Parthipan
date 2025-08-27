@@ -4,6 +4,9 @@ npx wdio run wdio.conf.ts
 npm run allure:report
 allure open allure-report
 
+npm install --save-dev xlsx
+
+
 
 # =================================================
 git init

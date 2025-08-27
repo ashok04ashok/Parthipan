@@ -1,17 +1,20 @@
-import FlipkartHomePage from '../pages/FlipkartHomePage';
 import { expect } from 'chai';
- let home = new FlipkartHomePage();
 
-describe('Flipkart Search', () => {
-  before("launch", async () => {
-    await browser.maximizeWindow();
-    await home.open();
-})
+import BasePage from '../pages/BasePage';
+import HomePage from '../pages/HomePage';
 
-  it('should search for laptops', async () => {
-    await home.search('laptop');
-    await browser.pause(5000); // wait for results
+let basePage = new BasePage();
+let homePage = new HomePage();
+
+describe('Purchase a product from Flipkart', () => {
+  before("Launch Flipkart", async () => {
+    await basePage.launchUrl("https://www.flipkart.com");
+  });
+
+  it('Search and purchase laptops on Flipkart', async () => {
+    await homePage.search('laptop');
     const title = await browser.getTitle();
     expect(title.toLowerCase()).to.include('laptop');
   });
+
 });

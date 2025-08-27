@@ -4,4 +4,8 @@ export const config = {
         browserName: 'chrome',
         acceptInsecureCerts: true
     }],
+     mochaOpts: {
+        ui: 'bdd',
+        timeout: 60000
+    }
 };
