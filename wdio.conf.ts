@@ -4,24 +4,18 @@ export const config = {
         browserName: 'chrome',
         acceptInsecureCerts: true
     }],
-     mochaOpts: {
+    framework: 'mocha',
+    reporters: ['spec', ['allure', { outputDir: 'allure-results', disableWebdriverStepsReporting: false, disableWebdriverScreenshotsReporting: false }]],
+    mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 60000,
     },
-     reporters: [
-        ['allure', {
-            outputDir: 'reports/allure-results',
-            disableWebdriverStepsReporting: true,
-            disableWebdriverScreenshotsReporting: false,
-        }]
-    ],
     before: function () {
-        const chai = require('chai');
-        global.expect = chai.expect;
+        require('ts-node').register({ files: true });
     },
-    afterTest: async function(test, context, { error }) {
+    afterTest: async function (test, context, { error }) {
         if (error) {
             await browser.takeScreenshot();
         }
-    },
+    }
 };

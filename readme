@@ -7,6 +7,8 @@ allure open allure-report
 npm install --save-dev xlsx
 
 
+npm init -y
+npm install --save-dev webdriverio @wdio/cli @wdio/local-runner ts-node typescript @wdio/mocha-framework @wdio/spec-reporter @wdio/allure-reporter @wdio/sync chromedriver edgedriver selenium-standalone xlsx dotenv
 
 # =================================================
 git init

@@ -4,6 +4,11 @@
       "node",
       "@wdio/globals/types",
       "@wdio/mocha-framework"
-    ]
+    ],
+    "target": "es2017",
+    "module": "commonjs",
+    "downlevelIteration": true, 
+    "strict": true,
+    "esModuleInterop": true
   },
 }
