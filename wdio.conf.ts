@@ -13,9 +13,9 @@ export const config = {
     before: function () {
         require('ts-node').register({ files: true });
     },
-    afterTest: async function (test, context, { error }) {
-        if (error) {
-            await browser.takeScreenshot();
-        }
-    }
+    // afterTest: async function (test, context, { error }) {
+    //     if (error) {
+    //         await browser.takeScreenshot();
+    //     }
+    // }
 };
